@@ -17,6 +17,6 @@ class Logger:
         else:
             Logger.__instance = self
 
-    def debug(self, message: str):
-        self._debug_messages.append(message)
-        print(message)
+    def debug(self, *messages: [str]):
+        self._debug_messages.append(' '.join(messages))
+        print(self._debug_messages[-1])
