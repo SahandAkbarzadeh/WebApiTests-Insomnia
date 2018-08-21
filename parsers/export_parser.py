@@ -3,6 +3,8 @@ from models.environment import EnvironmentModel
 from models.request import RequestModel
 from models.workspace import WorkspaceModel
 from models.request_group import RequestGroupModel
+from .environment_variable_parser import EnvironmentVariableParser
+from .js_parser import JsParser
 from logger.logger import Logger
 
 
@@ -19,6 +21,7 @@ class ExportParser:
 
     def parse(self):
         self._parse_environments()
+        self._parse_js()
         self._parse_request_groups()
         self._parse_requests()
         self._sort_requests_by_groups()
@@ -27,6 +30,11 @@ class ExportParser:
         _environments = [x for x in self._raw['resources'] if x['_type'] == 'environment']
         for env in _environments:
             self.environments.append(EnvironmentModel(env))
+
+    def _parse_js(self):
+        env_var_parser = EnvironmentVariableParser(self.environments)
+        env_var_parser.selected_env = env_var_parser.get_environment_by_name('sahand')
+        js_parser = JsParser(env_var_parser)
 
     def _parse_request_groups(self):
         _request_groups = [x for x in self._raw['resources'] if x['_type'] == 'request_group']
