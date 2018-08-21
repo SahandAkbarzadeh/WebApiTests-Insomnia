@@ -11,6 +11,8 @@ class WorkspaceModel:
     description: str
 
     def __init__(self, workspace: dict, requests=None, environments: [EnvironmentModel] = None):
+        self.environments = []
+        self.requests = []
         if requests is None:
             requests = []
         self.name = workspace['name']

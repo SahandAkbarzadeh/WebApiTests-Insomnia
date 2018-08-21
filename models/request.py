@@ -44,6 +44,7 @@ class RequestModel:
     name: str
     parent: str
     url: str
+    order: float
 
     def __init__(self, request: dict):
         self.id = request['_id']
@@ -54,3 +55,4 @@ class RequestModel:
         self.name = request['name']
         self.parent = request['parentId']
         self.url = request['url']
+        self.order = request['metaSortKey']
