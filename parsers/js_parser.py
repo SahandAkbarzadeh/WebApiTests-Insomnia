@@ -2,6 +2,7 @@ from typing import List
 import re
 from .environment_variable_parser import EnvironmentVariableParser
 from .functions.ray_token_gen import ray_token_gen
+import json
 
 
 class MethodEvaluator:
@@ -34,7 +35,7 @@ class MethodEvaluator:
     def eval(self) -> str:
         _method_name = self._get_method_name()
         if _method_name == ray_token_gen.__js_name__:
-            ray_token_gen(
+            return ray_token_gen(
                 self.environment_parser.get('KEYGEN_SECRET', default=''),
                 self.environment_parser.get('KEYGEN_SALT', default=''),
                 self.parameters[0],
@@ -54,13 +55,11 @@ class JsParser:
     def __init__(self, environment_parser: EnvironmentVariableParser):
         self.environment_parser = None
         self.environment_parser = environment_parser
-        self.parse()
+        self._parse()
 
-    def parse(self):
+    def _parse(self):
         for _ in range(5):
             self._iter_parser()
-        for environment in self.environment_parser.environments:
-            print(environment.data)
 
     def _iter_parser(self):
         for environment in self.environment_parser.environments:
@@ -88,6 +87,14 @@ class JsParser:
                     )
             elif type(env_dict[key]) is dict:
                 self._parse_dict(env_dict[key])
+            elif type(env_dict[key]) is list:
+                for item in env_dict[key]:
+                    self._parse_dict(item)
+
+    def parse(self, data: dict) -> dict:
+        _dict = data
+        self._parse_dict(_dict)
+        return _dict
 
     @staticmethod
     def get_variables(value: str) -> List[str]:

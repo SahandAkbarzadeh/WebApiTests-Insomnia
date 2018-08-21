@@ -18,6 +18,9 @@ class ExportParser:
     def __init__(self, data: dict):
         self._raw = data
         self.parse()
+        for r in self.requests:
+            if r.name == 'userAccount/setLogin':
+                print(r.body.body)
 
     def parse(self):
         self._parse_environments()
@@ -35,6 +38,7 @@ class ExportParser:
         env_var_parser = EnvironmentVariableParser(self.environments)
         env_var_parser.selected_env = env_var_parser.get_environment_by_name('sahand')
         js_parser = JsParser(env_var_parser)
+        js_parser.parse(self._raw)
 
     def _parse_request_groups(self):
         _request_groups = [x for x in self._raw['resources'] if x['_type'] == 'request_group']

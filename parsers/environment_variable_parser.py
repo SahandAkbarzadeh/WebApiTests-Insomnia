@@ -31,7 +31,6 @@ class EnvironmentVariableParser:
         :return: value
         """
         _environment = self.selected_env
-        print(_environment)
         if key in _environment.data:
             return _environment.data.get(key, '')
         if key in self.base_environment.data:

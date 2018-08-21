@@ -39,7 +39,7 @@ class BodyModel:
 class RequestModel:
     id: str
     body: BodyModel = None
-    headers: dict = {}
+    headers: dict
     method: str
     name: str
     parent: str
@@ -47,6 +47,8 @@ class RequestModel:
     order: float
 
     def __init__(self, request: dict):
+        self.headers = {}
+        self.body = None
         self.id = request['_id']
         self.body = BodyModel(request['body'])
         for header in request['headers']:
