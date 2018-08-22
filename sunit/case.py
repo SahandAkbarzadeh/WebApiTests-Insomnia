@@ -57,7 +57,7 @@ class TestCase:
         # name
         _name = __test__.get('name', '')
         if _name == '':
-            self._name = self.generate_name()
+            self._name = self._request_model.name + '@' + self.generate_name()
         else:
             self._name = _name
 

@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from models.environment import EnvironmentModel
 from models.request import RequestModel
 from models.workspace import WorkspaceModel
@@ -14,13 +14,13 @@ class ExportParser:
     requests: List[RequestModel] = []
     workspaces: List[WorkspaceModel] = []
     request_groups: List[RequestGroupModel] = []
+    environment_parser: Optional[EnvironmentVariableParser]
+    environment_name: str
 
     def __init__(self, data: dict):
+        self.environment_parser = None
         self._raw = data
-        self.parse()
-        for r in self.requests:
-            if r.name == 'userAccount/setLogin':
-                print(r.body.body)
+        self.environment_name = ''
 
     def parse(self):
         self._parse_environments()
@@ -35,9 +35,9 @@ class ExportParser:
             self.environments.append(EnvironmentModel(env))
 
     def _parse_js(self):
-        env_var_parser = EnvironmentVariableParser(self.environments)
-        env_var_parser.selected_env = env_var_parser.get_environment_by_name('sahand')
-        js_parser = JsParser(env_var_parser)
+        self.environment_parser = EnvironmentVariableParser(self.environments)
+        self.environment_parser.selected_env = self.environment_parser.get_environment_by_name(self.environment_name)
+        js_parser = JsParser(self.environment_parser)
         js_parser.parse(self._raw)
 
     def _parse_request_groups(self):
