@@ -176,8 +176,11 @@ class TestCase:
     def ok(self):
         _ok = True
         for report in self._reports:
-            if not report.status:
+            if report.status is False:
                 _ok = False
+                break
+            if report.status is None:
+                _ok = None
                 break
         return _ok
 

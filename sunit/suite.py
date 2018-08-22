@@ -34,6 +34,12 @@ class TestSuite:
             self._reports.append(case.report())
         return self._reports
 
+    def report_min(self) -> List[Optional[bool]]:
+        _min = []
+        for case in self._cases:
+            _min.append(case.ok)
+        return _min
+
     @property
     def number_of_cases(self):
         return len(self._cases)

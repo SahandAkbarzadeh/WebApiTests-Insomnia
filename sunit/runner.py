@@ -36,11 +36,12 @@ class TestRunner:
         _cases_ran = 0
         for run in self._suite.runs():
             _cases_ran += 1
-            self.interface.update(type='REPORT', data=run)
-            self.interface.update(type='PROGRESS', data='{0}/{1}'.format(
+            self.interface.update(update_type='REPORT', data=run)
+            self.interface.update(update_type='PROGRESS', data='{0}/{1}'.format(
                 str(_cases_ran),
                 str(self.number_of_cases())
             ))
+        self.interface.update(update_type='DONE', data=self._suite.report_min())
 
     def number_of_cases(self):
         return self._suite.number_of_cases
