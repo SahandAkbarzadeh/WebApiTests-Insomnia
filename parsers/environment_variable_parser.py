@@ -23,7 +23,7 @@ class EnvironmentVariableParser:
         if self.base_environment is None:
             raise Exception('no base environment')
 
-    def get(self, key: str, default=None) -> Optional[str]:
+    def get(self, key: str, default=None) -> Optional[str, dict]:
         """
         gets environment value from base and selected environment
         :param key:str

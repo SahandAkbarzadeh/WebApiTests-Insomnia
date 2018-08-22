@@ -3,6 +3,7 @@ import re
 from .environment_variable_parser import EnvironmentVariableParser
 from .functions.ray_token_gen import ray_token_gen
 import json
+from logger.logger import Logger
 
 
 class MethodEvaluator:
@@ -43,6 +44,7 @@ class MethodEvaluator:
                 self.parameters[2],
             )
         else:
+            Logger.get().debug('[MethodEvaluator]', 'failed to eval : {%', self.body, '%}')
             return ''
 
 
@@ -58,6 +60,9 @@ class JsParser:
         self._parse()
 
     def _parse(self):
+        """
+        parses environment variables and methods for general usage
+        """
         for _ in range(5):
             self._iter_parser()
 
@@ -92,8 +97,14 @@ class JsParser:
                     self._parse_dict(item)
 
     def parse(self, data: dict) -> dict:
+        """
+        general dict parser after parsing environments
+        """
         _dict = data
-        self._parse_dict(_dict)
+        for _ in range(5):
+            self._parse_dict(_dict)
+        for failed in self.get_variables(str(_dict)):
+            Logger.get().debug('[JsParser]', 'failed to find env value of "', failed, '"')
         return _dict
 
     @staticmethod
