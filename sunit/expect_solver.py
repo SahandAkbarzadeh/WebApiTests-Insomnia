@@ -5,16 +5,27 @@ from typing import Optional
 # noinspection PyBroadException
 class ExpectSolver:
     expression: str  # str python expression to solve
-    request_response: Response  # request's response for solver's scope variables
+    request_response: Optional[Response]  # request's response for solver's scope variables
     error: str
+
+    _name: str
 
     __solver_response: Optional[bool]  #
 
-    def __init__(self, expression: str, response):
-        self.request_response = response
+    def __init__(self, expression: str, name: str=''):
+        self._name = ''
+        self.request_response = None
         self.expression = expression
         self.__solver_response = None
         self.error = ''
+        self._name = name
+
+    @property
+    def name(self) -> str:
+        if self._name == '':
+            return self.expression
+        else:
+            return self._name
 
     def solve(self) -> bool:
         """

@@ -16,7 +16,8 @@ class TestExpectSolver(TestCase):
             }
             '''
         self.fake_response.status_code = 400
-        self.expect_solver = ExpectSolver('', self.fake_response)
+        self.expect_solver = ExpectSolver('')
+        self.expect_solver.request_response = self.fake_response
 
     def test_text_in_rs(self):
         self.expect_solver.expression = r"'test' in rs.lower()"

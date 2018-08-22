@@ -1,13 +1,16 @@
 from typing import List, Union, Optional
 from models.request import RequestModel
+from models.report import Report
 from logger.logger import Logger
 from parsers.environment_variable_parser import EnvironmentVariableParser
+from requests import request
+from .expect_solver import ExpectSolver
 
 
 class TestCase:
     _name: str
     _enabled: bool
-    _expressions: List[str]
+    _expressions: List[ExpectSolver]
 
     _headers_add: Optional[dict]
     _headers_remove: Optional[list]
@@ -25,9 +28,12 @@ class TestCase:
 
     _environment: Optional[EnvironmentVariableParser]
 
+    _reports: List[Report]
+
     def __init__(self, __test__: dict, request_model: RequestModel, environment: EnvironmentVariableParser):
         # setting default values
         self._name = ''
+        self._reports = []
         self._environment = None
         self._enabled = True
         self._expressions = None
@@ -128,9 +134,55 @@ class TestCase:
         self._tags = __test__.get('tags', [])
         self._tags += self._request_model.tests_tags
 
+        # expression
+        _expressions = __test__.get('expects', [])
+        self._expressions = []
+        for expr in _expressions:
+            if type(expr) is str:
+                self._expressions.append(ExpectSolver(expr))
+            elif type(expr) is dict:
+                for key in expr:
+                    self._expressions.append(ExpectSolver(expr[key], name=key))
+            else:
+                Logger.get().debug('[TestCase]',
+                                   'expect case must be either str or dict but is {0}'.format(type(expr)))
+
+    # noinspection PyBroadException
     def run(self):
-        pass
-        # TODO
+        # TODO : this only supports json add more
+
+        # send request
+        try:
+            _response = request(
+                self._request_model.method,
+                self._request_model.url,
+                headers=self._headers,
+                json=self._body,
+            )
+        except Exception as e:
+            self._reports.append(Report(False, str(e), name='sending request', tag='main'))
+            # create N/A reports for expressions
+            for expr in self._expressions:
+                self._reports.append(Report(None, 'expression ignored', name=expr.name, tag='sub'))
+            return
+
+        # check expects
+        for expr in self._expressions:
+            expr.request_response = expr
+            expr.solve()
+            self._reports.append(Report(expr.ok, 'pass' if expr.ok else expr.error, name=expr.name, tag='sub'))
+
+    @property
+    def ok(self):
+        _ok = True
+        for report in self._reports:
+            if not report.status:
+                _ok = False
+                break
+        return _ok
+
+    def report(self):
+        return self._reports
 
     def generate_name(self):
         return '[{0}]{1}@{2}'.format(
