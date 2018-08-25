@@ -28,9 +28,11 @@ class TestRunner:
     def create_test_suites(self):
         self._suite = TestSuite(name='default', environment_parser=self.export_parser.environment_parser)
         for request in self.export_parser.requests:
-            __tests__ = request.body.get_json().get('__tests__', [])
-            for __test__ in __tests__:
-                self._suite.add_case(__test__, request)
+            __tests__ = request.body.get_json()
+            if type(__tests__) == dict:
+                __tests__ = __tests__.get('__tests__', [])
+                for __test__ in __tests__:
+                    self._suite.add_case(__test__, request)
 
     def run(self):
         _cases_ran = 0

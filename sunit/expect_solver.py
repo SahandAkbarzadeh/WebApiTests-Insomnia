@@ -44,7 +44,12 @@ class ExpectSolver:
 
         # runs python expression
         try:
-            self.__solver_response = eval(self.expression)
+            _response = eval(self.expression)
+            if type(_response) is not bool:
+                self.__solver_response = False
+                self.error = 'return type is not bool'
+            else:
+                self.__solver_response = _response
         except Exception as e:
             self.__solver_response = False
             self.error = str(e)

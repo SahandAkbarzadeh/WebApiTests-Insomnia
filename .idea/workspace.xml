@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8eb4a402-9ce3-47ea-b318-5a2edc7e9ae5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/interfaces/terminal.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/terminal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsers/environment_variable_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/environment_variable_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunit/case.py" beforeDir="false" afterPath="$PROJECT_DIR$/sunit/case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunit/expect_solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/sunit/expect_solver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunit/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/sunit/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunit/suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/sunit/suite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_export.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_export.json" afterDir="false" />
+    </list>
+    <ignored path=".idea/misc.xml" />
+    <ignored path=".idea/modules.xml" />
+    <ignored path=".idea/sUnitTests_insomnia.iml" />
+    <ignored path=".idea/vcs.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/sUnitTests_insomnia$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1535178314445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sUnitTests_insomnia$Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver.coverage" NAME="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver Coverage Results" MODIFIED="1535176622459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sUnitTests_insomnia$Unittests_for_test_expectSolver_TestExpectSolver.coverage" NAME="Unittests for test_expectSolver.TestExpectSolver Coverage Results" MODIFIED="1534953825192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sunit/__tests__" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="215526776">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Python Console" value="382" />
+          <entry key="dummy" value="29" />
+          <entry key="json" value="48" />
+          <entry key="py" value="22028" />
+          <entry key="txt" value="277" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="53" />
+          <entry key="PLAIN_TEXT" value="306" />
+          <entry key="Python" value="22400" />
+          <entry key="RegExp" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="json" value="2" />
+          <entry key="py" value="63" />
+          <entry key="sql" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="2" />
+          <entry key="Python" value="63" />
+          <entry key="SQL" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sunit/suite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <marker date="1535176843742" expanded="true" signature="226:227" ph="..." />
+                <marker date="1535176843742" expanded="true" signature="226:231" ph="..." />
+                <marker date="1535176843742" expanded="true" signature="1125:1235" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sunit/expect_solver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="42" column="10" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+                <marker date="1534967851556" expanded="true" signature="118:123" ph="..." />
+                <marker date="1534967851556" expanded="true" signature="621:735" ph="..." />
+                <marker date="1534967851556" expanded="true" signature="759:768" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="817" selection-start-line="817" selection-end-line="817" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/sessions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="511" selection-start-line="511" selection-end-line="511" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sunit/case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="157" column="22" lean-forward="true" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+                <marker date="1535178374195" expanded="true" signature="307:327" ph="..." />
+                <marker date="1535178374195" expanded="true" signature="6736:7073" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sunit/runner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+                <marker date="1535176795526" expanded="true" signature="150:155" ph="..." />
+                <marker date="1535176795526" expanded="true" signature="150:220" ph="..." />
+                <marker date="1535176795526" expanded="true" signature="684:709" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interfaces/terminal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+                <marker date="1535178422701" expanded="true" signature="125:126" ph="..." />
+                <marker date="1535178422701" expanded="true" signature="218:252" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/request.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parsers/environment_variable_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+                <marker date="1535176654702" expanded="true" signature="123:128" ph="..." />
+                <marker date="1535176654702" expanded="true" signature="123:292" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>text</find>
+      <find>var</find>
+      <find>values</find>
+      <find>{{</find>
+      <find>print(</find>
+      <find>==</find>
+      <find>dict</find>
+      <find>content(self)</find>
+      <find>_expressions</find>
+      <find>ExpectSolver</find>
+      <find>print</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/logger/logger.py" />
+        <option value="$PROJECT_DIR$/parser/export_parser.py" />
+        <option value="$PROJECT_DIR$/models/environmentmodel.py" />
+        <option value="$PROJECT_DIR$/models/environment.py" />
+        <option value="$PROJECT_DIR$/models/workspace.py" />
+        <option value="$PROJECT_DIR$/models/request_group.py" />
+        <option value="$PROJECT_DIR$/parsers/env_variable_parser.py" />
+        <option value="$PROJECT_DIR$/parsers/functions/ray_token_gen.py" />
+        <option value="$PROJECT_DIR$/parsers/js_parser.py" />
+        <option value="$PROJECT_DIR$/test_export.json" />
+        <option value="$PROJECT_DIR$/models/request.py" />
+        <option value="$PROJECT_DIR$/sunit/__tests__/test_expectSolver.py" />
+        <option value="$PROJECT_DIR$/models/report.py" />
+        <option value="$PROJECT_DIR$/parsers/export_parser.py" />
+        <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/sunit/expect_solver.py" />
+        <option value="$PROJECT_DIR$/parsers/environment_variable_parser.py" />
+        <option value="$PROJECT_DIR$/sunit/runner.py" />
+        <option value="$PROJECT_DIR$/sunit/suite.py" />
+        <option value="$PROJECT_DIR$/sunit/case.py" />
+        <option value="$PROJECT_DIR$/interfaces/terminal.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="15" />
+    <option name="y" value="-25" />
+    <option name="width" value="1750" />
+    <option name="height" value="985" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyCompatibilityInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sUnitTests_insomnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sUnitTests_insomnia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sUnitTests_insomnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sUnitTests_insomnia" type="462c0819:PsiDirectoryNode" />
+              <item name="parsers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sUnitTests_insomnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sUnitTests_insomnia" type="462c0819:PsiDirectoryNode" />
+              <item name="sunit" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="xpe&#9;FILE&#9;file://C:/Users/sahand/Desktop/sUnitTests_insomnia/sunit/expect_solver.py&#10;test&#9;ACTION&#9;ImportTests&#10;settings&#9;ACTION&#9;Database.Settings" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sunit/__tests__" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sahand\Desktop\sUnitTests_insomnia" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Unnamed">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+      <module name="sUnitTests_insomnia" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\sahand\AppData\Local\Programs\Python\Python37-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="sUnitTests_insomnia" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;sunit.__tests__.test_expectSolver.TestExpectSolver&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_expectSolver.TestExpectSolver" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="sUnitTests_insomnia" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sunit/__tests__" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_expectSolver.TestExpectSolver&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python tests.Unittests for test_expectSolver.TestExpectSolver" />
+      <item itemvalue="Python tests.Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" />
+        <item itemvalue="Python tests.Unittests for test_expectSolver.TestExpectSolver" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8eb4a402-9ce3-47ea-b318-5a2edc7e9ae5" name="Default Changelist" comment="" />
+      <created>1534776106858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534776106858</updated>
+    </task>
+    <task id="LOCAL-00001" summary="base">
+      <created>1534778319002</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1534778319002</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added data models">
+      <created>1534800646334</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534800646334</updated>
+    </task>
+    <task id="LOCAL-00003" summary="better logger">
+      <created>1534800702312</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534800702312</updated>
+    </task>
+    <task id="LOCAL-00004" summary="base export_parser">
+      <created>1534800720701</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1534800720701</updated>
+    </task>
+    <task id="LOCAL-00005" summary="base">
+      <created>1534801024215</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1534801024215</updated>
+    </task>
+    <task id="LOCAL-00006" summary="sort requests">
+      <created>1534849154032</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1534849154032</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added js parser">
+      <created>1534859734478</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1534859734478</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added support for list ( js parser )">
+      <created>1534861091712</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1534861091712</updated>
+    </task>
+    <task id="LOCAL-00009" summary="base TestCase and expect solver">
+      <created>1534962094278</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1534962094278</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added run to TestCase">
+      <created>1534964129098</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1534964129098</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added TestSuite">
+      <created>1534964633258</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1534964633258</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added runner">
+      <created>1534966284994</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1534966284994</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added terminal interface">
+      <created>1534967508558</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1534967508558</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.22 at 21h 19m 04s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.22 at 21h 19m 10s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.22 at 21h 24m 07s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.22 at 21h 25m 15s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.22 at 21h 26m 29s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.22 at 21h 28m 17s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.22 at 21h 29m 12s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.22 at 21h 29m 52s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.23 at 00h 28m 15s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_sunit___tests___test_expectSolver_TestExpectSolver - 2018.08.25 at 10h 27m 04s.xml">
+      <configuration name="Unittests for sunit.__tests__.test_expectSolver.TestExpectSolver" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1818792" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info x="0" y="0" width="337" height="648" id="Documentation" order="3" weight="0.22885907" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32867134" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.46853146" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.32867134" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32867134" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32867134" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32867134" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32867134" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32867134" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32867134" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49932885" visible="true" weight="0.32307693" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.32867134" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32867134" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added data models" />
+    <MESSAGE value="better logger" />
+    <MESSAGE value="base export_parser" />
+    <MESSAGE value="base" />
+    <MESSAGE value="sort requests" />
+    <MESSAGE value="added js parser" />
+    <MESSAGE value="added support for list ( js parser )" />
+    <MESSAGE value="base TestCase and expect solver" />
+    <MESSAGE value="added run to TestCase" />
+    <MESSAGE value="added TestSuite" />
+    <MESSAGE value="added runner" />
+    <MESSAGE value="added terminal interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="added terminal interface" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/models.py</url>
+          <line>860</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/models.py</url>
+          <line>817</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sunit/expect_solver.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sunit/case.py</url>
+          <line>163</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sunit/case.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sunit/case.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="_DEFAULT_HEADERS.copy().update(_headers.copy())" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>env_dict[key]['_type'] == 'request'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="breakpointLogExpression">
+      <expression>
+        <expression-string>print(&quot;hit&quot;)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="watch">
+      <expression>
+        <expression-string>_DEFAULT_HEADERS.copy().update(_headers.copy())</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self._headers</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self._environment.get('DEFAULT_HEADERS', None)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self._request_model.url</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self._request_model.method</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.request_response</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self._expressions</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.body.get_json()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(_group.requests)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>_group.requests</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/logger/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/workspace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_export.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/request_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsers/functions/ray_token_gen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/adapters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="263" column="16" selection-start-line="263" selection-start-column="8" selection-end-line="263" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3000">
+          <caret line="119" column="76" lean-forward="true" selection-start-line="119" selection-start-column="76" selection-end-line="119" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/chardet/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="662" selection-start-line="662" selection-end-line="662" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/unittest/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="175" selection-start-line="175" selection-end-line="175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/unittestpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="303" selection-start-line="303" selection-end-line="303" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/unittest/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="252" column="20" lean-forward="true" selection-start-line="252" selection-start-column="20" selection-end-line="252" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-150343375/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5577" column="6" selection-start-line="5577" selection-start-column="6" selection-end-line="5577" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sunit/__tests__/test_expectSolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1534962585359" expanded="true" signature="1207:1481" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsers/js_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1534922232345" expanded="true" signature="221:1733" ph="..." />
+            <marker date="1534922232345" expanded="true" signature="1748:1749" ph="..." />
+            <marker date="1534922232345" expanded="true" signature="1748:1913" ph="..." />
+            <marker date="1534922232345" expanded="true" signature="2266:2272" ph="..." />
+            <marker date="1534922232345" expanded="true" signature="2451:3869" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsers/export_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1534965523527" expanded="true" signature="370:371" ph="..." />
+            <marker date="1534965523527" expanded="true" signature="370:657" ph="..." />
+            <marker date="1534965523527" expanded="true" signature="809:983" ph="..." />
+            <marker date="1534965523527" expanded="true" signature="1224:1516" ph="..." />
+            <marker date="1534965523527" expanded="true" signature="1548:2415" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="353" selection-start-line="353" selection-end-line="353" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsers/environment_variable_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1535176654702" expanded="true" signature="123:128" ph="..." />
+            <marker date="1535176654702" expanded="true" signature="123:292" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="817" selection-start-line="817" selection-end-line="817" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="511" selection-start-line="511" selection-end-line="511" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sunit/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+            <marker date="1535176795526" expanded="true" signature="150:155" ph="..." />
+            <marker date="1535176795526" expanded="true" signature="150:220" ph="..." />
+            <marker date="1535176795526" expanded="true" signature="684:709" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sunit/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1535176843742" expanded="true" signature="226:227" ph="..." />
+            <marker date="1535176843742" expanded="true" signature="226:231" ph="..." />
+            <marker date="1535176843742" expanded="true" signature="1125:1235" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sunit/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="157" column="22" lean-forward="true" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1535178374195" expanded="true" signature="307:327" ph="..." />
+            <marker date="1535178374195" expanded="true" signature="6736:7073" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaces/terminal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1535178422701" expanded="true" signature="125:126" ph="..." />
+            <marker date="1535178422701" expanded="true" signature="218:252" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sunit/expect_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1534967851556" expanded="true" signature="118:123" ph="..." />
+            <marker date="1534967851556" expanded="true" signature="621:735" ph="..." />
+            <marker date="1534967851556" expanded="true" signature="759:768" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

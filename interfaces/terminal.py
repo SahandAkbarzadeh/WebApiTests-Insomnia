@@ -20,13 +20,14 @@ class TerminalInterface:
             for report in data:
                 assert isinstance(report, Report)
                 _prefix = ''
-                if report.tag == 'main':
-                    _prefix = '  '
+                if report.tag == 'sub':
+                    _prefix = '   '
                 print(
                     ('{0}{1}[{2}]' + Back.RESET + Fore.CYAN + '{3}' + Fore.RESET + ' :{4}')
                         .format(
                         _prefix,
                         Back.BLUE if report.status is None else Back.GREEN if report.status is True else Back.RED,
+                        '?' if report.status is None else 'P' if report.status is True else 'F',
                         report.name,
                         report.description
                     ))

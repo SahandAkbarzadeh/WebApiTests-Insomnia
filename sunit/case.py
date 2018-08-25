@@ -97,6 +97,7 @@ class TestCase:
                                            '-b must be list of string but an element is {0}'.format(type(element)))
         else:
             _body = self._body_ignore_default
+        self._body = _body
 
         # headers
         # TODO: add type validation for headers
@@ -113,7 +114,9 @@ class TestCase:
 
             if _DEFAULT_HEADERS is not None:
                 assert isinstance(_DEFAULT_HEADERS, dict)
-                _headers = _DEFAULT_HEADERS.copy().update(_headers.copy())
+                _temp = _DEFAULT_HEADERS.copy()
+                _temp.update(_headers.copy())
+                _headers = _temp
 
             # add extra header elements
             if self._headers_add is not None:
@@ -129,6 +132,7 @@ class TestCase:
                                            '-h must be list of string but an element is {0}'.format(type(element)))
         else:
             _headers = self._headers_ignore_defaults
+        self._headers = _headers
 
         # tags
         self._tags = __test__.get('tags', [])
@@ -159,8 +163,10 @@ class TestCase:
                 headers=self._headers,
                 json=self._body,
             )
+            self._reports.append(Report(True, '', name=self._name, tag='main'))
+
         except Exception as e:
-            self._reports.append(Report(False, str(e), name='sending request', tag='main'))
+            self._reports.append(Report(False, str(e), name='sending request ' + self._name, tag='main'))
             # create N/A reports for expressions
             for expr in self._expressions:
                 self._reports.append(Report(None, 'expression ignored', name=expr.name, tag='sub'))
@@ -168,7 +174,7 @@ class TestCase:
 
         # check expects
         for expr in self._expressions:
-            expr.request_response = expr
+            expr.request_response = _response
             expr.solve()
             self._reports.append(Report(expr.ok, 'pass' if expr.ok else expr.error, name=expr.name, tag='sub'))
 

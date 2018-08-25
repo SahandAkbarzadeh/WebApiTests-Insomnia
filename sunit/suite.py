@@ -16,6 +16,7 @@ class TestSuite:
     def __init__(self, name, environment_parser: EnvironmentVariableParser):
         self._environment_parser = None
         self._reports = []
+        self._cases = []
 
         self._name = name
         self._environment_parser = environment_parser
