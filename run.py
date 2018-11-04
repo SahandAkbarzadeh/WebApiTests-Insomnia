@@ -6,11 +6,11 @@ from sunit.runner import TestRunner
 
 def main():
     _raw: str
-    with open('test_export.json', encoding="utf8") as file:
+    with open(r'tests.json', encoding="utf8") as file:
         _raw = file.read()
     parser = ExportParser(json.loads(_raw))
     interface = TerminalInterface()
-    runner = TestRunner(export_parser=parser, environment_name='sahand', interface=interface)
+    runner = TestRunner(export_parser=parser, environment_name='tests', interface=interface)
     interface.start()
 
 
