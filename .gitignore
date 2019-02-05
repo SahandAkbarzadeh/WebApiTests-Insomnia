@@ -3,3 +3,5 @@
 AloniProject_2018-08-25.json
 test_export.json
 *.pyc
+.idea
+.idea/codeStyles/codeStyleConfig.xml
