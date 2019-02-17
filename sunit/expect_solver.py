@@ -2,6 +2,16 @@ from requests.models import Response
 from typing import Optional
 
 
+def extract_number(value):
+    return ''.join([x for x in value if x.isdigit()])
+
+def list_are_equal(left_list, right_list):
+    return all([x[0] == x[1] for x in zip(left_list, right_list)])
+
+def sort(list, reversed=False):
+    list.sort(reverse=reversed)
+    return list
+
 # noinspection PyBroadException
 class ExpectSolver:
     expression: str  # str python expression to solve
