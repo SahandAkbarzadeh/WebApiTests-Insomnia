@@ -1,4 +1,5 @@
 from models.report import Report
+import sys
 
 import colorama
 from colorama import Back, Fore
@@ -56,3 +57,7 @@ class TerminalInterface:
                 str(_ignored),
                 str(_passed + _failed + _ignored)
             ))
+            if _failed > 0:
+                sys.exit(1)
+            else:
+                sys.exit(0)
