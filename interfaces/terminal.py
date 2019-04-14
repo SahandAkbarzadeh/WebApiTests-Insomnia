@@ -4,16 +4,25 @@ import sys
 import colorama
 from colorama import Back, Fore
 
-colorama.init()
-
 
 class TerminalInterface:
+
+    no_color: bool = False
 
     def __init__(self):
         self.run_callback = None
         pass
 
     def start(self):
+        if not self.no_color:
+            colorama.init()
+        else:
+            Back.RESET = ''
+            Fore.CYAN = ''
+            Fore.RESET = ''
+            Back.BLUE = ''
+            Back.GREEN = ''
+            Back.RED = ''
         self.run_callback()
 
     def update(self, update_type: str, data):
