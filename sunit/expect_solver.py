@@ -1,6 +1,6 @@
 from requests.models import Response
 from typing import Optional
-
+from pprint import pprint
 
 def extract_number(value):
     return ''.join([x for x in value if x.isdigit()])
