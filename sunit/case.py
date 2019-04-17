@@ -174,6 +174,7 @@ class TestCase:
         # TODO : this only supports json add more
 
         # send request
+        root_report: Report
         try:
             _response = request(
                 self._request_model.method,
@@ -181,7 +182,7 @@ class TestCase:
                 headers=self._headers,
                 json=self._body,
             )
-            self._reports.append(Report(True, '', name=self._name, tag='main'))
+            root_report = Report(True, '', name=self._name, tag='main')
 
         except Exception as e:
             self._reports.append(Report(False, str(e), name='sending request ' + self._name, tag='main'))
@@ -199,6 +200,12 @@ class TestCase:
         for save in self._save:
             save.request_response = _response
             save.solve()
+
+        for report in self._reports:
+            if not report.status:
+                root_report.status = False
+
+        self._reports = [root_report] + self._reports
 
     @property
     def ok(self):

@@ -6,8 +6,8 @@ from colorama import Back, Fore
 
 
 class TerminalInterface:
-
     no_color: bool = False
+    minimal_output: bool = False
 
     def __init__(self):
         self.run_callback = None
@@ -30,7 +30,11 @@ class TerminalInterface:
             for report in data:
                 assert isinstance(report, Report)
                 _prefix = ''
+                if report.status and self.minimal_output:
+                    continue
                 if report.tag == 'sub':
+                    if self.minimal_output:
+                        continue
                     _prefix = '   '
                 print(
                     ('{0}{1}[{2}]' + Back.RESET + Fore.CYAN + '{3}' + Fore.RESET + ' :{4}')
