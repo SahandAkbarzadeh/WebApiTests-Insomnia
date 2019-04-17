@@ -1,22 +1,10 @@
 from requests.models import Response
 from typing import Optional
 
-
-def extract_number(value):
-    return ''.join([x for x in value if x.isdigit()])
+from sunit.expect_solver import ExpectSolver
 
 
-def list_are_equal(left_list, right_list):
-    return all([x[0] == x[1] for x in zip(left_list, right_list)])
-
-
-def sort(list, reversed=False):
-    list.sort(reverse=reversed)
-    return list
-
-
-# noinspection PyBroadException
-class ExpectSolver:
+class VariableSave:
     expression: str  # str python expression to solve
     request_response: Optional[Response]  # request's response for solver's scope variables
     error: str
@@ -56,14 +44,27 @@ class ExpectSolver:
         ok = self.request_response.ok
         s = ExpectSolver.storage
 
+        if '<-' not in self.expression:
+            self.__solver_response = False
+            self.error = 'Expression is not valid'
+            return self.ok
+
+        expr = self.expression.split('<-')
+        left_expr = 'ExpectSolver.storage.{0}'.format(expr[0].strip())
+
+        if ' ' in left_expr:
+            self.__solver_response = False
+            self.error = 'Expression is not valid'
+            return self.ok
+
+        right_expr = expr[1].strip()
+
+        expr = '{0} = {1}'.format(left_expr, right_expr).strip()
+
         # runs python expression
         try:
-            _response = eval(self.expression)
-            if type(_response) is not bool:
-                self.__solver_response = False
-                self.error = 'return type is not bool'
-            else:
-                self.__solver_response = _response
+            exec(expr)
+            self.__solver_response = True
         except Exception as e:
             self.__solver_response = False
             self.error = str(e)
@@ -83,10 +84,3 @@ class ExpectSolver:
     @property
     def ok(self) -> Optional[bool]:
         return self.__solver_response
-
-
-class Storage:
-    pass
-
-
-ExpectSolver.storage = Storage()

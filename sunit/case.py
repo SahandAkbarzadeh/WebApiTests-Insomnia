@@ -4,6 +4,8 @@ from models.report import Report
 from logger.logger import Logger
 from parsers.environment_variable_parser import EnvironmentVariableParser
 from requests import request
+
+from sunit.variable_save import VariableSave
 from .expect_solver import ExpectSolver
 
 
@@ -21,6 +23,8 @@ class TestCase:
     _body_remove: Union[str, list, None]
     _body_ignore_default: Union[str, dict, None]
     _body: dict
+
+    _save: [VariableSave]
 
     _tags: [str]
 
@@ -151,6 +155,16 @@ class TestCase:
                 Logger.get().debug('[TestCase]',
                                    'expect case must be either str or dict but is {0}'.format(type(expr)))
 
+        # save variables
+        _save = __test__.get('save', [])
+        self._save = []
+        for save in _save:
+            if type(save) is str:
+                self._save.append(VariableSave(save))
+            else:
+                Logger.get().debug('[TestCase]',
+                                   'save variables must be str but is {0}'.format(type(save)))
+
     # noinspection PyBroadException
     def run(self):
         # TODO : this only supports json add more
@@ -177,6 +191,10 @@ class TestCase:
             expr.request_response = _response
             expr.solve()
             self._reports.append(Report(expr.ok, 'pass' if expr.ok else expr.error, name=expr.name, tag='sub'))
+
+        for save in self._save:
+            save.request_response = _response
+            save.solve()
 
     @property
     def ok(self):
