@@ -34,6 +34,8 @@ class TestCase:
 
     _reports: List[Report]
 
+    _url_override: str
+
     def __init__(self, __test__: dict, request_model: RequestModel, environment: EnvironmentVariableParser):
         # setting default values
         self._name = ''
@@ -64,6 +66,8 @@ class TestCase:
             self._name = self._request_model.name + '@' + self.generate_name()
         else:
             self._name = _name
+
+        self._url_override = __test__.get('url', None)
 
         # enabled
         _data = __test__.get('enabled', True)
@@ -173,7 +177,7 @@ class TestCase:
         try:
             _response = request(
                 self._request_model.method,
-                self._request_model.url,
+                self._url_override or self._request_model.url,
                 headers=self._headers,
                 json=self._body,
             )
