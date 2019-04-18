@@ -33,7 +33,7 @@ class TerminalInterface:
                 if report.status and self.minimal_output:
                     continue
                 if report.tag == 'sub':
-                    if self.minimal_output:
+                    if self.minimal_output and report.status:
                         continue
                     _prefix = '   '
                 print(
