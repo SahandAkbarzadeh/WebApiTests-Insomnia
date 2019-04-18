@@ -4,6 +4,8 @@ import sys
 import colorama
 from colorama import Back, Fore
 
+colorama.init()
+
 
 class TerminalInterface:
     no_color: bool = False
@@ -14,15 +16,6 @@ class TerminalInterface:
         pass
 
     def start(self):
-        if not self.no_color:
-            colorama.init()
-        else:
-            Back.RESET = ''
-            Fore.CYAN = ''
-            Fore.RESET = ''
-            Back.BLUE = ''
-            Back.GREEN = ''
-            Back.RED = ''
         self.run_callback()
 
     def update(self, update_type: str, data):
@@ -36,12 +29,21 @@ class TerminalInterface:
                     if self.minimal_output and report.status:
                         continue
                     _prefix = '   '
-                output = ('{0}{1}[{2}]' + Back.RESET + Fore.CYAN + '{3}' + Fore.RESET + ' :{4}').format(
-                    _prefix,
-                    Back.BLUE if report.status is None else Back.GREEN if report.status is True else Back.RED,
-                    '?' if report.status is None else 'P' if report.status is True else 'F',
-                    report.name,
-                    report.description)
+                output = ''
+                if self.no_color:
+                    output = '{0}[{1}] {2} : {3}'.format(
+                        _prefix,
+                        '?' if report.status is None else 'P' if report.status is True else 'F',
+                        report.name,
+                        report.description
+                    )
+                else:
+                    output = ('{0}{1}[{2}]' + Back.RESET + Fore.CYAN + '{3}' + Fore.RESET + ' :{4}').format(
+                        _prefix,
+                        Back.BLUE if report.status is None else Back.GREEN if report.status is True else Back.RED,
+                        '?' if report.status is None else 'P' if report.status is True else 'F',
+                        report.name,
+                        report.description)
                 output = TerminalInterface.fix_non_latin_chars(output)
                 print(output)
         elif update_type == 'PROGRESS':
@@ -78,7 +80,7 @@ class TerminalInterface:
     def fix_non_latin_chars(string):
         result = ''
         for value in string:
-            if value in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890[]{}!#$%^&*()\\/`'\":":
+            if value in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890[]{}!#$%^&*()\\/`'\":\n\t -<>_=+-*/.":
                 result += value
             else:
                 result += '?'
