@@ -36,15 +36,14 @@ class TerminalInterface:
                     if self.minimal_output and report.status:
                         continue
                     _prefix = '   '
-                print(
-                    ('{0}{1}[{2}]' + Back.RESET + Fore.CYAN + '{3}' + Fore.RESET + ' :{4}')
-                        .format(
-                        _prefix,
-                        Back.BLUE if report.status is None else Back.GREEN if report.status is True else Back.RED,
-                        '?' if report.status is None else 'P' if report.status is True else 'F',
-                        report.name,
-                        report.description
-                    ))
+                output = ('{0}{1}[{2}]' + Back.RESET + Fore.CYAN + '{3}' + Fore.RESET + ' :{4}').format(
+                    _prefix,
+                    Back.BLUE if report.status is None else Back.GREEN if report.status is True else Back.RED,
+                    '?' if report.status is None else 'P' if report.status is True else 'F',
+                    report.name,
+                    report.description)
+                output = TerminalInterface.fix_non_latin_chars(output)
+                print(output)
         elif update_type == 'PROGRESS':
             pass
             # TODO: change terminal window title
@@ -74,3 +73,13 @@ class TerminalInterface:
                 sys.exit(1)
             else:
                 sys.exit(0)
+
+    @staticmethod
+    def fix_non_latin_chars(string):
+        result = ''
+        for value in string:
+            if value in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890[]{}!#$%^&*()\\/`'\":":
+                result += value
+            else:
+                result += '?'
+        return result
