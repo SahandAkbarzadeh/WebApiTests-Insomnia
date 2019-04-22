@@ -12,6 +12,7 @@ from .expect_solver import ExpectSolver
 class TestCase:
     _name: str
     _enabled: bool
+    _enabled_condition: str
     _expressions: List[ExpectSolver]
 
     _headers_add: Optional[dict]
@@ -53,6 +54,7 @@ class TestCase:
         self._body_ignore_default = None
         self._body = {}
         self._tags = []
+        self._enabled_condition = None
         # request model will be useful with url, request mode, naming, ...
         self._request_model = request_model
         # environment will be useful for default headers
@@ -71,13 +73,15 @@ class TestCase:
 
         # enabled
         _data = __test__.get('enabled', True)
-        if type(_data) is not bool:
+        if not isinstance(_data, bool) and not isinstance(_data, str):
             Logger.get().debug('[TestCase]',
-                               'expected bool got {0}'.format(type(_data)),
+                               'expected bool or str got {0}'.format(type(_data)),
                                'for:',
                                str(_data))
             _data = True
         self._enabled = self._request_model.tests_enabled and _data
+        if type(_data) is str:
+            self._enabled_condition = _data
 
         # body
         # TODO: add type validation for body
@@ -171,6 +175,13 @@ class TestCase:
 
     # noinspection PyBroadException
     def run(self):
+        s = ExpectSolver.storage
+        _condition = self._enabled_condition or ""
+        if _condition.strip() != "" and not eval(self._enabled_condition):
+            return
+        if not self._enabled:
+            return
+
         # TODO : this only supports json add more
 
         # send request
