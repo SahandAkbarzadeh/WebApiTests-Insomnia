@@ -53,7 +53,8 @@ class TerminalInterface:
                         '?' if report.status is None else 'P' if report.status is True else 'F',
                         report.name,
                         report.description)
-                output = TerminalInterface.fix_non_latin_chars(output)
+                if self.no_color:
+                    output = TerminalInterface.fix_non_latin_chars(output)
                 print(output)
         elif update_type == 'PROGRESS':
             pass
