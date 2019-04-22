@@ -16,6 +16,15 @@ class TerminalInterface:
         pass
 
     def start(self):
+        if not self.no_color:
+            colorama.init()
+        else:
+            Back.RESET = ''
+            Fore.CYAN = ''
+            Fore.RESET = ''
+            Back.BLUE = ''
+            Back.GREEN = ''
+            Back.RED = ''
         self.run_callback()
 
     def update(self, update_type: str, data):
